@@ -4,9 +4,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 80%;
+  width: 100%;
   margin: 40px auto;
   margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .body a {
