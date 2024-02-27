@@ -7,7 +7,7 @@ function Annonces(){
             {logements.map((logement) => (
                 <article className='card' key={logement.id}>
                 <a href='#'>
-                <img src={logement.pictures[0]} alt={logement.title}></img>
+                <img src={logement.cover} alt={logement.title}></img>
                 <h2 >{logement.title}</h2>
                 </a>
                 </article>
