@@ -1,12 +1,19 @@
 .annonces{
-    background-color: #F6F6F6;
-    padding: 50px;
     border-radius: 25px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
-    width: 75%;
+    width: auto;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+      @media (min-width: 1279px){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: #F6F6F6;
+        width: auto;
+        padding: 55px 50px 45px 50px;
+      }
 }
 
 .card {
@@ -32,6 +39,7 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
+    right: 10px;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;

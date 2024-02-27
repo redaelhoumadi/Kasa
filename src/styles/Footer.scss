@@ -4,4 +4,20 @@
     padding-bottom: 30px;
     background-color: #000;
     margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo_footer {
+    filter: brightness(0) invert(1);
+    width: 122px;
+}
+
+.footer_kasa h3{
+    margin-top: 40px;
+    color: #fff;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 500;
 }

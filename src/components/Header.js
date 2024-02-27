@@ -3,7 +3,7 @@ import '../styles/Header.scss'
 function Header(){
     return (
         <header className='kasa_header'>
-        <img src={logo} alt="logo Kasa" />
+        <img src={logo} alt="logo Kasa" className='logo_kasa'/>
         <nav className='kasa_nav'>
             <ul >
                 <li><a href='#'>Accueil</a></li>

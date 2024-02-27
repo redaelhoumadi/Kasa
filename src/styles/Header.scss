@@ -1,21 +1,35 @@
 .kasa_header{
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
 }
 
+.logo_kasa{
+    width: 145px;
+    @media (min-width: 769px){
+        width: 210px;
+      }
+}
+
 .kasa_nav ul{
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 60px;
+    gap: 26px;
+    @media (min-width: 769px){
+        gap: 60px;
+      }
 }
 
 li {
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 0.75rem;
+    
+    @media (min-width: 769px){
+        font-size: 1.5rem;
+      }
 }
 
 .kasa_nav ul li a {
@@ -23,4 +37,13 @@ li {
     color: #000;
     font-family:  'Montserrat', sans-serif;
     font-weight: 500;
+    text-transform:uppercase;
+    @media (min-width: 769px){
+        text-transform:capitalize;
+      }
+    
+}
+
+.kasa_nav ul li a:hover{
+    text-decoration: underline;
 }
