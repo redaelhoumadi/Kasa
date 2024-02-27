@@ -1,10 +1,10 @@
 import '../styles/Banner.scss'
-import plage from '../assets/plage.jpg'
-function Banner() {
+
+function Banner(props) {
     return (
         <div className="kasa_banner">
-            <h1>Chez vous, partout et ailleurs</h1>
-            <img src={plage} alt='Vue sur une plage'></img>
+            <h1>{props.tittle}</h1>
+            <img src={props.url} alt={props.alt}></img>
         </div>
     )
 }

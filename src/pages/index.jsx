@@ -1,19 +1,17 @@
 import '../styles/App.scss';
-import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Annonces from '../components/Annonces';
-import Footer from '../components/Footer';
+import plage from '../assets/plage.jpg'
 
 function App() {
   return (
-    <>
+    
       <div className='container'>
-        <Header />
-        <Banner />
+        <Banner tittle='Chez vous, partout et ailleurs' url={plage} alt='plage'/>
         <Annonces />
       </div>
-      <Footer />
-    </>
+      
+
   );
 }
 

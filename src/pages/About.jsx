@@ -1,9 +1,9 @@
-import Header from "../components/Header"
-
+import montagne from '../assets/montagne.jpg'
+import Banner from "../components/Banner"
 function About() {
     return (
         <div className='container'>
-            <Header />
+            <Banner tittle='Nos valeurs' url={montagne} alt='montagne'/>
         </div>
     )
 }

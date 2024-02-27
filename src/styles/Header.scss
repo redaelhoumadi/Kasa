@@ -13,26 +13,12 @@
       }
 }
 
-.kasa_nav ul{
-    padding: 0;
-    margin: 0;
+.kasa_nav{
     display: flex;
-    gap: 26px;
-    @media (min-width: 769px){
-        gap: 60px;
-      }
+    gap: 20px;
 }
 
-li {
-    list-style: none;
-    font-size: 0.75rem;
-    
-    @media (min-width: 769px){
-        font-size: 1.5rem;
-      }
-}
-
-.kasa_nav ul li a {
+.kasa_nav a {
     text-decoration: none;
     color: #000;
     font-family:  'Montserrat', sans-serif;
@@ -44,6 +30,11 @@ li {
     
 }
 
-.kasa_nav ul li a:hover{
+.kasa_nav a:hover{
     text-decoration: underline;
 }
+
+.container{
+    width: 80%;
+    margin: auto;
+  }
