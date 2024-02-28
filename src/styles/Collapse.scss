@@ -1,5 +1,43 @@
-.about_main{
-    background-color: aquamarine;
+.collapse{
     width: auto;
-    padding: 10px 5%;
+    background-color: #F6F6F6;
+    padding-bottom: 1px;
+    border-radius: 5px;
+    height: 55px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.collapse:hover{
+    height: 100%;
+}
+
+.collapse_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    margin: 0 auto;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background: #ff6060;
+    font-family: 'montserrat', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.collapse_content{
+    font-size: 18px;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 400;
+    width: auto;
+    padding-left: 20px;
+}
+
+.main_about{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }

@@ -1,15 +1,13 @@
 import '../styles/Annonces.scss'
 import logements from '../data/logements'
+import Card from './Card'
 
 function Annonces(){
     return (
         <main className='annonces'>
             {logements.map((logement) => (
                 <article className='card' key={logement.id}>
-                <a href='#'>
-                <img src={logement.cover} alt={logement.title}></img>
-                <h2 >{logement.title}</h2>
-                </a>
+                <Card title={logement.title} cover={logement.cover} id={logement.id}/>
                 </article>
             ))}
         
