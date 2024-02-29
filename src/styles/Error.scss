@@ -1,0 +1,39 @@
+main {
+  justify-content: center;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #ff6060;
+  text-align: center;
+}
+
+.error-number {
+  font-size: 10em;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  @media (min-width: 769px){
+    font-size: 288px;
+  }
+}
+
+.error-message {
+  font-weight: 500;
+  font-size: 36px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.error-back {
+  width: fit-content;
+  text-decoration: none;
+  bottom: 15em;
+  font-size: 18px;
+  border-bottom: solid 2px #000;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 50px 0px;
+}
