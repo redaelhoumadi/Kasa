@@ -1,12 +1,15 @@
-import '../styles/Annonces.scss'
+import '../styles/Annonces.scss';
+import { Link } from 'react-router-dom';
 
 function Card(props) {
     return (
-        <a href={`/logement/${props.id}`}>
-                <img src={props.cover} alt={props.title}></img>
-                <h2 >{props.title}</h2>
-                </a>
-    )
+        <Link to={`/logement/${props.id}`}>
+            <img src={props.cover} alt={props.title} />
+            <h2>{props.title}</h2>
+        </Link>
+    );
 }
 
-export default Card
+export default Card;
+
+

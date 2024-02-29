@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Erreur from './pages/Error'
+import Logements from './pages/Logement';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +18,7 @@ root.render(
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/About" element={<About />} />
-
+                <Route path="/logement/:id" element={<Logements />} />
                 <Route path="*" element={<Erreur />} />
             </Routes>
             <Footer />
