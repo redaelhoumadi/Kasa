@@ -1,19 +1,28 @@
+import React, { useState } from 'react';
 import '../styles/Collapse.scss';
-import rowUp from '../assets/row_up.svg'
 import List from './List';
 
+function Collapse({ items, title, content }) {
+    const [isOpen, setIsOpen] = useState(false);
 
-function Collapse({items, title, content}) {
+    const toggleCollapse = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
-        <div className='collapse'>
-        <div className='collapse_title'><h3>{title}</h3><img src={rowUp} alt='row up'/></div>
-        <div className='collapse_content'><p>{content}</p>
-        <List items={items}/>
-    </div>
+        <div className={`collapse ${isOpen ? 'open-collapse' : ''}`}>
+            <div className='collapse_title' onClick={toggleCollapse}>
+                <h3>{title}</h3>
+                <i className={isOpen ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i>
+            </div>
+            {isOpen && (
+                <div className='collapse_content'>
+                    <p>{content}</p>
+                    <List items={items} />
+                </div>
+            )}
         </div>
-        
-    )
+    );
 }
 
-export default Collapse
+export default Collapse;
