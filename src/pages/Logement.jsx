@@ -5,6 +5,7 @@ import Tags from '../components/Tags'
 import Host from '../components/Host'
 import '../styles/Logement.scss'
 import React, { useEffect } from 'react';
+import Ratings from '../components/Ratings'
 
 const checkItemId = (id) => {
     const itemExists = logements.some(item => item.id === id);
@@ -22,17 +23,13 @@ function Logements() {
     },[id,navigate])
 
     const myLogement = logements.find((logement) => logement.id === id);
-    console.log(myLogement.equipments);
-    const equipements = myLogement.equipments.map(equipement => equipement.equipments);
-    //const equipements = myLogement.equipments
-    console.log('equipements',equipements);
     const firstName = myLogement.host.name.split(' ')[0]
     const lastName = myLogement.host.name.split(' ')[1]
     const hostAvatar = myLogement.host.picture
     const logementTitle = myLogement.title
     const logementLocation = myLogement.location
     const logementDescription = myLogement.description
-    
+    console.log(myLogement.rating)
 
 
     return(
@@ -41,14 +38,19 @@ function Logements() {
         <div>
         <h2 className='logement-title'>{logementTitle}</h2>
         <h3 className='logement-location'>{logementLocation}</h3>
+        <Tags items={myLogement.tags}/>
         </div>
+        <div>
         <Host firstName={firstName} lastName={lastName} url={hostAvatar}/>
+        <Ratings ratingValue={myLogement.rating}/>
         </div>
         
-        <Tags items={myLogement.tags}/>
+        </div>
+        
+        
         <div className='descr-equi'>
         <div className='moite'><Collapse key={id} title="Description" content={logementDescription} /></div>
-        <div className='moite'><Collapse title="Equipements" items={myLogement.equipments}/></div>
+        <div className='moite'><Collapse key={id}title="Equipements" items={myLogement.equipments}/></div>
         </div>
         
         </div>
