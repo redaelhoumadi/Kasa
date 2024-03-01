@@ -1,0 +1,19 @@
+.host-infos{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.host-name{
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #FF6060;
+    text-align: right;
+    font-size: 18px;
+}
+
+.host-image{
+    width: 64px; 
+    height:64px;
+    border-radius: 90px;
+}
