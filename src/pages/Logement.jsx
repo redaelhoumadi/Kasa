@@ -6,6 +6,7 @@ import Host from '../components/Host'
 import '../styles/Logement.scss'
 import Ratings from '../components/Ratings'
 import Error from "../components/Error";
+import LogementCarousel from '../components/Carrousel'
 
 function Logements() {
     const { id } = useParams();
@@ -15,7 +16,7 @@ function Logements() {
 
     // Vérifiez si le logement existe
     if (!myLogement) {
-        // Si l'ID spécifié ne correspond à aucun logement, affichez un message d'erreur
+        // Si l'ID spécifié ne correspond à aucun logement, affichez la page d'erreur
         return <Error />
     }
 
@@ -29,6 +30,10 @@ function Logements() {
 
     return (
         <div className='logement-contenair'>
+        <div className="logement">
+          <LogementCarousel pictures={myLogement.pictures} /> 
+        </div>
+
             <div className='logement-host'>
                 <div>
                     <h2 className='logement-title'>{logementTitle}</h2>
