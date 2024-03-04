@@ -7,6 +7,7 @@ import '../styles/Logement.scss'
 import Ratings from '../components/Ratings'
 import Error from "../components/Error";
 import LogementCarousel from '../components/Carrousel'
+import { useEffect } from 'react'
 
 function Logements() {
     const { id } = useParams();
@@ -14,11 +15,6 @@ function Logements() {
     // Recherchez le logement avec l'ID spécifié dans les paramètres de l'URL
     const myLogement = logements.find((logement) => logement.id === id);
 
-    // Vérifiez si le logement existe
-    if (!myLogement) {
-        // Si l'ID spécifié ne correspond à aucun logement, affichez la page d'erreur
-        return <Error />
-    }
 
     // Si le logement existe, continuez le rendu du composant
     const firstName = myLogement.host.name.split(' ')[0];
@@ -28,9 +24,19 @@ function Logements() {
     const logementLocation = myLogement.location;
     const logementDescription = myLogement.description;
 
+    useEffect(() => {
+        document.title = `Logement: ${logementTitle}`
+    }, [logementTitle])
+
+    // Vérifiez si le logement existe
+    if (!myLogement) {
+        // Si l'ID spécifié ne correspond à aucun logement, affichez la page d'erreur
+        return <Error />
+    }
+
     return (
         <div className='logement-contenair'>
-        <div className="logement">
+        <div className="logement-carrousel">
           <LogementCarousel pictures={myLogement.pictures} /> 
         </div>
 

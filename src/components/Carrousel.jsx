@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
+import '../styles/Carrousel.scss';
 const ImageCarousel = ({ pictures }) => {
   // Vérifie s'il n'y a qu'une seule image dans le carrousel
   const isSingleImage = pictures.length === 1;
