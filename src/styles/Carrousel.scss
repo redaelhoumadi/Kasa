@@ -1,11 +1,49 @@
 .logement-carrousel{
     margin-top: 50px;
+    display: flex;
+    position: relative;
 }
 
-.slider{
+.prev,
+.next {
+  position: absolute;
+  height: 100%;
+  width: 30px;
+  border: none;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+
+  @media (max-width: 769px) {
+    width: 15px;
+  }
+}
+
+.prev:hover,
+.next:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.25em gray);
+}
+
+.prev{
+    left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.show {
+    width: 100%;
+    border-radius: 1em;
     height: 415px;
-}
+    object-fit: cover;
+  }
 
-.slider-wrapper{
-    border-radius: 25px;
-}
+.counter {
+    position: absolute;
+    bottom: 1em;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2.5px grey;
+    width: 100%;
+  }

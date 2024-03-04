@@ -1,28 +1,44 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import '../styles/Carrousel.scss';
-const ImageCarousel = ({ pictures }) => {
-  // Vérifie s'il n'y a qu'une seule image dans le carrousel
-  const isSingleImage = pictures.length === 1;
+import '../styles/Carrousel.scss'
+import prev from '../assets/previous.svg'
+import next from '../assets/next.svg'
 
-  // Si une seule image est présente, ne pas afficher les boutons suivants/précédents
-  if (isSingleImage) {
+import React, { useState } from 'react';
+
+const ImageCarousel = ({ pictures }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? pictures.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === pictures.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  if (pictures.length === 0) {
+    return null;
+  }
+
+  if (pictures.length === 1) {
     return (
-      <div>
-        <img src={pictures[0]} alt="Single" />
+      <div className='logement-carrousel'>
+        <img className='show' src={pictures[0]} alt="Single" />
+        <p className='counter'>1 / 1</p>
       </div>
     );
   }
 
   return (
-    <Carousel infiniteLoop stopOnHover showThumbs={false}>
-      {pictures.map((image, index) => (
-        <div key={index}>
-          <img src={image} alt={`Slide ${index}`} />
-        </div>
-      ))}
-    </Carousel>
+    <div className='logement-carrousel'>
+      <img src={prev} className='prev' onClick={goToPrevious} alt='previus'/>
+      <img className='show' src={pictures[currentImageIndex]} alt={`${currentImageIndex + 1}`} />
+      <img src={next} className='next' onClick={goToNext} alt='next'/>
+      <p className='counter'>{currentImageIndex + 1} / {pictures.length}</p>
+    </div>
   );
 };
 

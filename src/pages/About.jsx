@@ -8,7 +8,7 @@ function About() {
 
     useEffect(() => {
         document.title = `About Kasa`
-    }, [])
+    })
     return (
         <div className='container'>
             <Banner tittle='Nos valeurs' url={montagne} alt='montagne'/>

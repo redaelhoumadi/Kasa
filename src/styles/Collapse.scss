@@ -5,7 +5,10 @@
     border-radius: 5px;
     height: 55px;
     overflow: hidden;
-    transition: all 0.4s ease-in-out;
+    @media (max-width: 769px){
+        height: 30px;
+    }
+
 }
 
 .open-collapse{
@@ -26,6 +29,10 @@
     color: #fff;
     font-size: 24px;
     font-weight: 700;
+    @media (max-width: 769px){
+        font-size: 14px;
+        height: 30px;
+    }
 }
 
 .collapse_content{

@@ -6,7 +6,7 @@ function Ratings(props){
     return(
         <span className='rating-contnair'>
             {range.map((rangeElem) =>
-                ratingValue >= rangeElem ? <i class="fas fa-star full-star" key={rangeElem.toString()}></i> : <i key={rangeElem} className="fas fa-star empty-star"></i> 
+                ratingValue >= rangeElem ? <i className="fas fa-star full-star" key={rangeElem.toString()}></i> : <i key={rangeElem} className="fas fa-star empty-star"></i> 
             )}
         </span>
     )

@@ -1,15 +1,14 @@
-import '../styles/Tags.scss'
+import React from 'react';
+import '../styles/Tags.scss';
 
-function Tags({items}){
-    
-    return ( 
+function Tags({items}) {
+    return (
         <div className='tags-contnair'>
-      {items && items.map((item) => (
-        <span className="tags" key={item.id}>{item}</span>
-      ))}
-    </div>  
-    )
+            {items && items.map((item, index) => (
+                <span key={index} className="tags">{item}</span>
+            ))}
+        </div>
+    );
 }
 
-
-export default Tags
+export default Tags;

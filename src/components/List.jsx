@@ -4,8 +4,8 @@ function List({items}) {
 
     return ( 
         <ul>
-      {items && items.map((item) => (
-        <li key={item.id}>{item}</li>
+      {items && items.map((item,index) => (
+        <li key={index} >{item}</li>
       ))}
     </ul>  
     )
