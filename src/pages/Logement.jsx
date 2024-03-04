@@ -7,7 +7,6 @@ import '../styles/Logement.scss'
 import Ratings from '../components/Ratings'
 import Error from "../components/Error";
 import ImageCarousel from '../components/Carrousel'
-import { useEffect } from 'react'
 
 function Logements() {
     const { id } = useParams();
