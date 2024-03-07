@@ -1,7 +1,6 @@
 import '../styles/Carrousel.scss'
 import prev from '../assets/previous.svg'
 import next from '../assets/next.svg'
-
 import React, { useState } from 'react';
 
 const ImageCarousel = ({ pictures }) => {
