@@ -17,6 +17,7 @@ root.render(
             <Header />
             <Routes>
                 <Route path="/" element={<App />} />
+                <Route path="/Kasa" element={<App />} />
                 <Route path="/About" element={<About />} />
                 <Route path="/logement/:id" element={<Logements />} />
                 <Route path="*" element={<Erreur />} />

@@ -3,16 +3,16 @@ import prev from '../assets/previous.svg'
 import next from '../assets/next.svg'
 import React, { useState } from 'react';
 
-const ImageCarousel = ({ pictures }) => {
+function ImageCarousel  ({ pictures }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const goToPrevious = () => {
+  function goToPrevious(){
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? pictures.length - 1 : prevIndex - 1
     );
   };
 
-  const goToNext = () => {
+  function goToNext(){
     setCurrentImageIndex((prevIndex) =>
       prevIndex === pictures.length - 1 ? 0 : prevIndex + 1
     );
