@@ -26,7 +26,6 @@ function ImageCarousel  ({ pictures }) {
     return (
       <div className='logement-carrousel'>
         <img className='show' src={pictures[0]} alt="Single" />
-        <p className='counter'>1 / 1</p>
       </div>
     );
   }
